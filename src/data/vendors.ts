@@ -1,0 +1,175 @@
+export interface Vendor {
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  logo: string;
+  coverImage: string;
+  products: string[];
+  socialLinks: {
+    instagram?: string;
+    facebook?: string;
+    website?: string;
+  };
+  eventsParticipated: number;
+  featured: boolean;
+}
+
+export const categories = [
+  "All",
+  "Fashion & Textiles",
+  "Food & Beverages",
+  "Arts & Crafts",
+  "Beauty & Wellness",
+  "Home & Living",
+  "Jewelry & Accessories",
+  "Technology",
+  "Services",
+] as const;
+
+export const vendors: Vendor[] = [
+  {
+    id: "1",
+    name: "Imigongo Arts",
+    category: "Arts & Crafts",
+    description: "Traditional Rwandan geometric art pieces handcrafted using cow dung and natural pigments. Each piece tells a story of our heritage.",
+    logo: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1582582494705-f8ce0b0c24f0?w=600&h=400&fit=crop",
+    products: ["Wall Art", "Decorative Panels", "Custom Pieces"],
+    socialLinks: { instagram: "imigongoarts", facebook: "imigongoarts" },
+    eventsParticipated: 12,
+    featured: true,
+  },
+  {
+    id: "2",
+    name: "Kigali Coffee Co.",
+    category: "Food & Beverages",
+    description: "Premium single-origin Rwandan coffee, roasted fresh weekly. Experience the rich flavors of the land of a thousand hills.",
+    logo: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&h=400&fit=crop",
+    products: ["Whole Beans", "Ground Coffee", "Cold Brew"],
+    socialLinks: { instagram: "kigalicoffeeco", website: "kigalicoffee.rw" },
+    eventsParticipated: 15,
+    featured: true,
+  },
+  {
+    id: "3",
+    name: "Kitenge Queens",
+    category: "Fashion & Textiles",
+    description: "Modern African fashion featuring vibrant kitenge prints. Contemporary designs that celebrate African beauty.",
+    logo: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=600&h=400&fit=crop",
+    products: ["Dresses", "Accessories", "Custom Tailoring"],
+    socialLinks: { instagram: "kitengequeens", facebook: "kitengequeens" },
+    eventsParticipated: 10,
+    featured: true,
+  },
+  {
+    id: "4",
+    name: "Ubumwe Baskets",
+    category: "Home & Living",
+    description: "Traditional Rwandan woven baskets made by local cooperatives. Each basket supports women artisans.",
+    logo: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1590736969955-71cc94801759?w=600&h=400&fit=crop",
+    products: ["Storage Baskets", "Decorative Baskets", "Gift Sets"],
+    socialLinks: { instagram: "ubumwebaskets" },
+    eventsParticipated: 14,
+    featured: true,
+  },
+  {
+    id: "5",
+    name: "Nyirangarama Honey",
+    category: "Food & Beverages",
+    description: "Pure organic honey from the volcanic highlands of Rwanda. Raw, unprocessed, and naturally delicious.",
+    logo: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&h=400&fit=crop",
+    products: ["Raw Honey", "Honeycomb", "Beeswax Products"],
+    socialLinks: { instagram: "nyirangaramahoney" },
+    eventsParticipated: 8,
+    featured: false,
+  },
+  {
+    id: "6",
+    name: "Umuganda Jewelry",
+    category: "Jewelry & Accessories",
+    description: "Handcrafted jewelry inspired by Rwandan traditions. Unique pieces made with locally sourced materials.",
+    logo: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=400&fit=crop",
+    products: ["Necklaces", "Bracelets", "Earrings"],
+    socialLinks: { instagram: "umugandajewelry", website: "umugandajewelry.com" },
+    eventsParticipated: 11,
+    featured: true,
+  },
+  {
+    id: "7",
+    name: "Inyange Naturals",
+    category: "Beauty & Wellness",
+    description: "Natural skincare products made from Rwandan botanicals. Pure beauty from nature.",
+    logo: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&h=400&fit=crop",
+    products: ["Body Butters", "Essential Oils", "Skincare Sets"],
+    socialLinks: { instagram: "inyangenaturals", facebook: "inyangenaturals" },
+    eventsParticipated: 9,
+    featured: false,
+  },
+  {
+    id: "8",
+    name: "Umurage Leatherworks",
+    category: "Fashion & Textiles",
+    description: "Premium leather goods handcrafted by skilled Rwandan artisans. Timeless quality meets contemporary style.",
+    logo: "https://images.unsplash.com/photo-1473188588951-666fce8e7c68?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=400&fit=crop",
+    products: ["Bags", "Wallets", "Belts"],
+    socialLinks: { instagram: "umurageleather" },
+    eventsParticipated: 7,
+    featured: false,
+  },
+  {
+    id: "9",
+    name: "Rwanda Tech Hub",
+    category: "Technology",
+    description: "Innovative tech solutions and gadgets from local startups. Empowering Africa through technology.",
+    logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop",
+    products: ["Smart Devices", "Apps", "Tech Accessories"],
+    socialLinks: { instagram: "rwandatechhub", website: "rwandatechhub.rw" },
+    eventsParticipated: 5,
+    featured: false,
+  },
+  {
+    id: "10",
+    name: "Ishema Spices",
+    category: "Food & Beverages",
+    description: "Authentic East African spice blends and seasonings. Bring the flavors of Rwanda to your kitchen.",
+    logo: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=600&h=400&fit=crop",
+    products: ["Spice Blends", "Single Spices", "Gift Boxes"],
+    socialLinks: { instagram: "ishemaspices" },
+    eventsParticipated: 13,
+    featured: true,
+  },
+  {
+    id: "11",
+    name: "Amahoro Ceramics",
+    category: "Arts & Crafts",
+    description: "Beautiful handmade pottery inspired by Rwandan landscapes and culture. Functional art for everyday use.",
+    logo: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=600&h=400&fit=crop",
+    products: ["Vases", "Dinnerware", "Decorative Pieces"],
+    socialLinks: { instagram: "amahoroceramics", facebook: "amahoroceramics" },
+    eventsParticipated: 6,
+    featured: false,
+  },
+  {
+    id: "12",
+    name: "Urukundo Textiles",
+    category: "Home & Living",
+    description: "Handwoven home textiles featuring traditional Rwandan patterns. Comfort meets culture.",
+    logo: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=200&h=200&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop",
+    products: ["Blankets", "Cushion Covers", "Table Linens"],
+    socialLinks: { instagram: "urukundotextiles" },
+    eventsParticipated: 10,
+    featured: false,
+  },
+];
